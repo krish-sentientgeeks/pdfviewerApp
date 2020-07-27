@@ -19,11 +19,11 @@ public class pdfviewerApp extends CordovaPlugin {
             this.coolMethod(message, callbackContext);
             return true;
         }
-        if(action.equals("print")){
-            String message = args.getString(0);
-            this.print(message, callbackContext);
-            return true;
-        }
+        // if(action.equals("print")){
+        //     String message = args.getString(0);
+        //     this.print(message, callbackContext);
+        //     return true;
+        // }
         return false;
     }
 
@@ -34,11 +34,11 @@ public class pdfviewerApp extends CordovaPlugin {
             callbackContext.error("Expected one non-empty string argument.");
         }
     }
-    private void print(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
-    }
+    // private void print(String message, CallbackContext callbackContext) {
+    //     if (message != null && message.length() > 0) {
+    //         callbackContext.success(message);
+    //     } else {
+    //         callbackContext.error("Expected one non-empty string argument.");
+    //     }
+    // }
 }
